@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '8.0'
+
+target 'LBBaseComponent_Example' do
+  pod 'LBBaseComponent', :path => '../'
+
+  target 'LBBaseComponent_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
