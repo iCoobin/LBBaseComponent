@@ -29,7 +29,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-@interface LBTheme : NSObject <LBThemeProtocol>
+@interface LBDefaultTheme : NSObject <LBThemeProtocol>
 
 @property (nonatomic, strong ,readonly) UIColor *mainColor;
 @property (nonatomic, strong ,readonly) UIColor *bgColor;

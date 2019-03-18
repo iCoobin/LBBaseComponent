@@ -7,7 +7,7 @@
 
 #import "LBTheme.h"
 
-@interface LBTheme ()
+@interface LBDefaultTheme ()
 
 @property (nonatomic, strong) UIColor *mainColor;
 @property (nonatomic, strong) UIColor *bgColor;
@@ -25,7 +25,7 @@
 
 @end
 
-@implementation LBTheme
+@implementation LBDefaultTheme
 
 - (UIColor *)mainColor{
     return UIColor.redColor;

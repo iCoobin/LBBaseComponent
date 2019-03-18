@@ -21,7 +21,7 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         instance = [[LBConst alloc] init];
-        instance.theme = [[LBTheme alloc] init];
+        instance.theme = [[LBDefaultTheme alloc] init];
     });
     return instance;
 }
