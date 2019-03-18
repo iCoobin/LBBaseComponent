@@ -26,11 +26,10 @@ TODO: Add long description of the pod here.
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'iCoobin' => 'shoubin.cheng@5th.work' }
   s.source           = { :git => 'https://github.com/iCoobin/LBBaseComponent.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'LBBaseComponent/Classes/**/*'
+  s.source_files = 'LBBaseComponent/Classes/*.{h,m}'
   
   # s.resource_bundles = {
   #   'LBBaseComponent' => ['LBBaseComponent/Assets/*.png']
@@ -39,4 +38,24 @@ TODO: Add long description of the pod here.
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
+  s.subspec 'Base' do |ss|
+      ss.source_files = 'LBBaseComponent/Classes/Base/**/*.{h,m}'
+      ss.public_header_files = 'LBBaseComponent/Classes/Base/**/*.{h}'
+  end
+  
+  s.subspec 'Categories' do |ss|
+      ss.source_files = 'LBBaseComponent/Classes/Categories/**/*.{h,m}'
+      ss.public_header_files = 'LBBaseComponent/Classes/Categories/**/*.{h}'
+  end
+  
+  s.subspec 'Const' do |ss|
+      ss.source_files = 'LBBaseComponent/Classes/Const/**/*.{h,m}'
+      ss.public_header_files = 'LBBaseComponent/Classes/Const/**/*.{h}'
+  end
+  
+  s.subspec 'Util' do |ss|
+      ss.source_files = 'LBBaseComponent/Classes/Util/**/*.{h,m}'
+      ss.public_header_files = 'LBBaseComponent/Classes/Util/**/*.{h}'
+  end
+  
 end
