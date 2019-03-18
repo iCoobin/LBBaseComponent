@@ -8,5 +8,7 @@
 #ifndef LBBase_h
 #define LBBase_h
 
+#import "LBBaseView.h"
+#import "LBBaseCell.h"
 
 #endif /* LBBase_h */
