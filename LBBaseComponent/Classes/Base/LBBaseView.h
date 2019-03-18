@@ -11,7 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface LBBaseView : UIView
 
-//override
+//需override
 - (void)makeUI;
 - (void)makeConstraint;
 - (void)makeEvent;

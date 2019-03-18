@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		149DB575223F3F2600F4FA29 /* HelloView.m in Sources */ = {isa = PBXBuildFile; fileRef = 149DB574223F3F2600F4FA29 /* HelloView.m */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -40,8 +39,6 @@
 /* Begin PBXFileReference section */
 		054197213E86668A07DFE0AD /* Pods-LBBaseComponent_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LBBaseComponent_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-LBBaseComponent_Example/Pods-LBBaseComponent_Example.release.xcconfig"; sourceTree = "<group>"; };
 		099DB993AEA60BB531FD3D6F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		149DB573223F3F2600F4FA29 /* HelloView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelloView.h; sourceTree = "<group>"; };
-		149DB574223F3F2600F4FA29 /* HelloView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloView.m; sourceTree = "<group>"; };
 		373D3602DBCA5BE61EC33688 /* LBBaseComponent.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LBBaseComponent.podspec; path = ../LBBaseComponent.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		6003F58A195388D20070C39A /* LBBaseComponent_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LBBaseComponent_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -151,8 +148,6 @@
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
 				6003F5A5195388D20070C39A /* LBViewController.h */,
 				6003F5A6195388D20070C39A /* LBViewController.m */,
-				149DB573223F3F2600F4FA29 /* HelloView.h */,
-				149DB574223F3F2600F4FA29 /* HelloView.m */,
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
@@ -212,7 +207,7 @@
 				6003F586195388D20070C39A /* Sources */,
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
-				7C708060FB5F615ECD158FAC /* [CP] Embed Pods Frameworks */,
+				3508B8461852A5B565213307 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -299,7 +294,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		7C708060FB5F615ECD158FAC /* [CP] Embed Pods Frameworks */ = {
+		3508B8461852A5B565213307 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -361,7 +356,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				6003F59E195388D20070C39A /* LBAppDelegate.m in Sources */,
-				149DB575223F3F2600F4FA29 /* HelloView.m in Sources */,
 				6003F5A7195388D20070C39A /* LBViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 			);

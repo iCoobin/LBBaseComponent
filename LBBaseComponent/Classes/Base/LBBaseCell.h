@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,assign) NSIndexPath *indexPath;
 @property (nonatomic,strong) id viewModel;
 
-//override
+//需override
 - (void)makeUI;
 - (void)makeConstraint;
 - (void)makeEvent;
