@@ -35,7 +35,8 @@ Pod::Spec.new do |s|
   #   'LBBaseComponent' => ['LBBaseComponent/Assets/*.png']
   # }
 
-  s.public_header_files = 'Pod/Classes/**/*.h'
+  #s.public_header_files = 'Pod/Classes/**/*.h'
+  s.public_header_files = 'LBBaseComponent/Classes/LBBaseComponent.h'
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
   s.subspec 'Base' do |ss|
