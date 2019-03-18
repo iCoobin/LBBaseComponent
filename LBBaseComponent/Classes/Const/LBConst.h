@@ -9,6 +9,7 @@
 #define LBConst_h
 
 #import "LBDevice.h"
+#import "LBTheme.h"
 
 #endif /* LBConst_h */
 
@@ -45,5 +46,20 @@
 + (NSString *)currentAppBuildNumber;
 //当前app Bundle Identifier
 + (NSString *)currentAppBundleIdentifier;
+
+//主题样式
++ (void)setTheme:(id<LBThemeProtocol>)theme;
++ (UIColor *)mainColor;
++ (UIColor *)bgColor;
++ (UIColor *)fontColor0;
++ (UIColor *)fontColor1;
++ (UIColor *)fontColor2;
++ (UIColor *)fontColor3;
++ (UIColor *)fontColor4;
+
++ (CGFloat)fontSize1;
++ (CGFloat)fontSize2;
++ (CGFloat)fontSize3;
++ (CGFloat)fontSize4;
 
 @end

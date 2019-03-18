@@ -8,7 +8,27 @@
 #import "LBConst.h"
 #import "LBDevice.h"
 
+@interface LBConst()
+
+@property (nonatomic,strong) id<LBThemeProtocol> theme;
+
+@end
+
 @implementation LBConst
+
++ (instancetype)share{
+    static LBConst *instance = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        instance = [[LBConst alloc] init];
+        instance.theme = [[LBTheme alloc] init];
+    });
+    return instance;
+}
+
++ (void)setTheme:(id<LBThemeProtocol>)theme{
+    [LBConst share].theme = theme;
+}
 
 + (CGFloat)screenWidth{
     return UIScreen.mainScreen.bounds.size.width;
@@ -76,6 +96,41 @@
 //当前app id
 + (NSString *)currentAppBundleIdentifier{
     return [[NSBundle mainBundle] bundleIdentifier];
+}
+
++ (UIColor *)mainColor{
+    return [LBConst share].theme.mainColor;
+}
++ (UIColor *)bgColor{
+    return [LBConst share].theme.bgColor;
+}
++ (UIColor *)fontColor0{
+    return [LBConst share].theme.fontColor0;
+}
++ (UIColor *)fontColor1{
+    return [LBConst share].theme.fontColor1;
+}
++ (UIColor *)fontColor2{
+    return [LBConst share].theme.fontColor2;
+}
++ (UIColor *)fontColor3{
+    return [LBConst share].theme.fontColor3;
+}
++ (UIColor *)fontColor4{
+    return [LBConst share].theme.fontColor4;
+}
+
++ (CGFloat)fontSize1{
+    return [LBConst share].theme.fontSize1;
+}
++ (CGFloat)fontSize2{
+    return [LBConst share].theme.fontSize2;
+}
++ (CGFloat)fontSize3{
+    return [LBConst share].theme.fontSize3;
+}
++ (CGFloat)fontSize4{
+    return [LBConst share].theme.fontSize4;
 }
 
 @end
