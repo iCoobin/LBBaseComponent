@@ -9,23 +9,27 @@
 
 @implementation NSObject (Extension)
 
-+ (BOOL)isNull:(id)object {
-    if ((object == nil) || (object == [NSNull null])) {
-        return YES;
+- (instancetype)initWithDict:(NSDictionary *)dict {
+    if (self = [self init]) {
+        [self setValuesForKeysWithDictionary:dict];
     }
-    return NO;
+    return self;
 }
 
-+ (BOOL)isNotNull:(id)object {
-    if ((object != nil) && (object != [NSNull null])) {
+- (BOOL)isNull
+{
+    if ((self == nil) || (self == [NSNull null])) {
         return YES;
     }
-    
     return NO;
 }
 
 - (id)valueForUndefinedKey:(NSString *)key {
     return nil;
+}
+
+- (void)setValue:(id)value forUndefinedKey:(NSString *)key {
+    NSLog(@"KVC未识别key...%@",key);
 }
 
 @end

@@ -12,6 +12,22 @@ NS_ASSUME_NONNULL_BEGIN
 @interface UIImage (Extension)
 
 /**
+ 截取view的内容，生成图片
+ 
+ @param view 截取view
+ @return 生成UIImage对象
+ */
++ (UIImage *)snapshotWithView:(UIView *)view;
+
+/**
+ 截取scrollView的内容，生成图片
+ 
+ @param scrollView 截取scrollView
+ @return 生成UIImage对象
+ */
++ (UIImage *)snapshotWithScrollView:(UIScrollView *)scrollView;
+
+/**
  *  根据CIImage生成指定大小的UIImage
  *
  *  @param image CIImage

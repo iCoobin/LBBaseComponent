@@ -7,12 +7,20 @@
 //
 
 #import "LBAppDelegate.h"
+#import <Number/AUUNumber.h>
 
 @implementation LBAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    
+    [AUUNumberHandler globalNumberHandler:^(AUUNumberHandler *numberHandler) {
+        
+    } exceptionHandler:^NSDecimalNumber *(SEL operation, NSCalculationError error, NSDecimalNumber *leftOperand, NSDecimalNumber *rightOperant) {
+        return (@1).decimalNumber;
+    }];
+    
     return YES;
 }
 

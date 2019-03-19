@@ -180,25 +180,6 @@
     return self.frame.origin.y;
 }
 
-/**
- 截取view的内容，生成图片
- 
- @param view 截取view
- @return 生成UIImage对象
- */
-+ (UIImage *)snapshotSingleView:(UIView *)view {
-    
-    UIGraphicsBeginImageContextWithOptions(view.bounds.size, NO, 0.0);
-    
-    [view drawViewHierarchyInRect:view.frame afterScreenUpdates:NO];
-    
-    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
-    
-    UIGraphicsEndImageContext();
-    
-    return image;
-}
-
 @end
 
 #pragma mark - RoundedCorners
@@ -232,6 +213,28 @@
     borderLayer.fillColor = [UIColor clearColor].CGColor;
     //    [self.layer insertSublayer:borderLayer atIndex:0];
     [self.layer addSublayer:borderLayer];
+}
+
+@end
+
+
+#pragma mark - ViewController
+@implementation UIView (ViewController)
+
+/**
+ 获取View所在的当前Controller
+ 
+ @return 当前Controller or nil
+ */
+- (UIViewController *)currentViewController
+{
+    for (UIView *next = [self superview]; next; next = next.superview) {
+        UIResponder *nextResponder = [next nextResponder];
+        if ([nextResponder isKindOfClass:[UIViewController class]]) {
+            return (UIViewController *)nextResponder;
+        }
+    }
+    return nil;
 }
 
 @end

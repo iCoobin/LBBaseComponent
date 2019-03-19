@@ -8,6 +8,7 @@
 
 #import "LBViewController.h"
 #import <LBBaseComponent/LBBaseComponent.h>
+#import <Number/AUUNumber.h>
 
 
 @interface LBViewController ()
@@ -19,8 +20,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	
     
+    NSString *dd = nil;
+    NSLog(@"%@",dd.md5_16);
 }
 
 - (void)didReceiveMemoryWarning

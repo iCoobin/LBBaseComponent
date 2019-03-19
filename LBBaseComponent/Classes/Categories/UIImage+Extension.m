@@ -10,6 +10,44 @@
 @implementation UIImage (Extension)
 
 /**
+ 截取view的内容，生成图片
+ 
+ @param view 截取view
+ @return 生成UIImage对象
+ */
++ (UIImage *)snapshotWithView:(UIView *)view{
+    UIGraphicsBeginImageContextWithOptions(view.frame.size, YES, UIScreen.mainScreen.scale);
+    [view.layer renderInContext:UIGraphicsGetCurrentContext()];
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return image;
+}
+
+/**
+ 截取scrollView的内容，生成图片
+ 
+ @param scrollView 截取scrollView
+ @return 生成UIImage对象
+ */
++ (UIImage *)snapshotWithScrollView:(UIScrollView *)scrollView{
+    CGPoint currentContentOffset = scrollView.contentOffset;
+    CGRect currentFrame = scrollView.frame;
+    
+    scrollView.contentOffset = CGPointZero;
+    scrollView.frame = CGRectMake(0, 0, scrollView.frame.size.width, scrollView.frame.size.height);
+    
+    UIGraphicsBeginImageContextWithOptions(scrollView.contentSize, YES, UIScreen.mainScreen.scale);
+    [scrollView.layer renderInContext:UIGraphicsGetCurrentContext()];
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    
+    scrollView.contentOffset = currentContentOffset;
+    scrollView.frame = currentFrame;
+    UIGraphicsEndImageContext();
+    return image;
+    
+}
+
+/**
  *  根据CIImage生成指定大小的UIImage
  *
  *  @param image CIImage

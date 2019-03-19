@@ -5,11 +5,11 @@ platform :ios, '8.0'
 target 'LBBaseComponent_Example' do
     pod 'LBBaseComponent', :path => '../'
 
-    #pod 'LBBaseComponent', :git => 'git@github.com:iCoobin/LBBaseComponent.git', :tag => '0.1.0'
-
+    #pod 'LBBaseComponent', :git => 'git@github.com:iCoobin/LBBaseComponent.git', :tag => '0.1.1'
+    pod 'Number'
+    pod 'FDFullscreenPopGesture'
+    
   target 'LBBaseComponent_Tests' do
     inherit! :search_paths
-
-    
   end
 end

@@ -11,14 +11,14 @@
 static NSString * const ABMaxLengthKey = @"ABMaxLengthKey";
 @implementation UITextField (Extention)
 
-- (instancetype)init {
-    self = [super init];
-    if (self) {
-        self.autocorrectionType = UITextAutocorrectionTypeNo;
-        self.autocapitalizationType = UITextAutocapitalizationTypeNone;
-    }
-    return self;
-}
+//- (instancetype)init {
+//    self = [super init];
+//    if (self) {
+//        self.autocorrectionType = UITextAutocorrectionTypeNo;
+//        self.autocapitalizationType = UITextAutocapitalizationTypeNone;
+//    }
+//    return self;
+//}
 
 - (NSInteger)maxLength
 {

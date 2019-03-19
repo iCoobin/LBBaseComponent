@@ -30,8 +30,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) CGFloat x;
 @property (nonatomic, assign) CGFloat y;
 
-+ (UIImage *)snapshotSingleView:(UIView *)view;
-
 @end
 
 #pragma mark - RoundedCorners
@@ -40,6 +38,18 @@ NS_ASSUME_NONNULL_BEGIN
 //使用图层蒙版为视图添加圆角 可以设置view四个角的任意几个角
 - (void)setRoundedCorners:(UIRectCorner)corners radius:(CGSize)size;
 - (void)setCornerRadius:(CGFloat)radius;
+
+@end
+
+#pragma mark - ViewController
+@interface UIView (ViewController)
+
+/**
+ 获取View所在的当前Controller
+
+ @return 当前Controller or nil
+ */
+- (UIViewController *)currentViewController;
 
 @end
 

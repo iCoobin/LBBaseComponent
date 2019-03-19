@@ -1,4 +1,5 @@
 PODS:
+  - FDFullscreenPopGesture (1.1)
   - LBBaseComponent (0.1.1):
     - LBBaseComponent/Base (= 0.1.1)
     - LBBaseComponent/Categories (= 0.1.1)
@@ -8,17 +9,27 @@ PODS:
   - LBBaseComponent/Categories (0.1.1)
   - LBBaseComponent/Const (0.1.1)
   - LBBaseComponent/Util (0.1.1)
+  - Number (0.1.1)
 
 DEPENDENCIES:
+  - FDFullscreenPopGesture
   - LBBaseComponent (from `../`)
+  - Number
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - FDFullscreenPopGesture
+    - Number
 
 EXTERNAL SOURCES:
   LBBaseComponent:
     :path: "../"
 
 SPEC CHECKSUMS:
+  FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
   LBBaseComponent: b7b319ddd700e54fc81986943efd8456b94141b6
+  Number: 0fb76d954a6492118f3a2e8b2560f6550568bd2a
 
-PODFILE CHECKSUM: 5a66c00f7536bac2925de4059118df7dc10467ca
+PODFILE CHECKSUM: 1046e1486b709f8cb31a4d0cc52588d2f3680004
 
 COCOAPODS: 1.5.3

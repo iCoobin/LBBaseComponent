@@ -11,9 +11,20 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NSObject (Extension)
 
-+ (BOOL)isNull:(id)object;
+/**
+ 用于KVC赋值
 
-+ (BOOL)isNotNull:(id)object;
+ @param dict JSON数据
+ @return Model对象
+ */
+- (instancetype)initWithDict:(NSDictionary *)dict;
+
+/**
+ 对象判空
+
+ @return YES or NO
+ */
+- (BOOL)isNull;
 
 @end
 
