@@ -15,5 +15,6 @@
 #import "UIImage+Extension.h"
 #import "UITextField+Extention.h"
 #import "UIView+Extension.h"
+#import "UIViewController+Extension.h"
 
 #endif /* LBCategories_h */

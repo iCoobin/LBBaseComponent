@@ -59,4 +59,9 @@ Pod::Spec.new do |s|
       ss.public_header_files = 'LBBaseComponent/Classes/Util/**/*.{h}'
   end
   
+  s.subspec 'ThirdPart' do |ss|
+      ss.source_files = 'LBBaseComponent/Classes/ThirdPart/**/*.{h,m}'
+      ss.public_header_files = 'LBBaseComponent/Classes/ThirdPart/**/*.{h}'
+  end
+  
 end

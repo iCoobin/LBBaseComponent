@@ -21,8 +21,6 @@
 {
     [super viewDidLoad];
     
-    NSString *dd = nil;
-    NSLog(@"%@",dd.md5_16);
 }
 
 - (void)didReceiveMemoryWarning

@@ -12,5 +12,6 @@
 #import "LBCategories.h"
 #import "LBConst.h"
 #import "LBUtil.h"
+#import "UINavigationController+FDFullscreenPopGesture.h"
 
 #endif /* LBBaseComponent_h */

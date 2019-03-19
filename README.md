@@ -1,14 +1,5 @@
 # LBBaseComponent
 
-[![CI Status](https://img.shields.io/travis/iCoobin/LBBaseComponent.svg?style=flat)](https://travis-ci.org/iCoobin/LBBaseComponent)
-[![Version](https://img.shields.io/cocoapods/v/LBBaseComponent.svg?style=flat)](https://cocoapods.org/pods/LBBaseComponent)
-[![License](https://img.shields.io/cocoapods/l/LBBaseComponent.svg?style=flat)](https://cocoapods.org/pods/LBBaseComponent)
-[![Platform](https://img.shields.io/cocoapods/p/LBBaseComponent.svg?style=flat)](https://cocoapods.org/pods/LBBaseComponent)
-
-## Example
-
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
 ## Requirements
 ```
 1.UI基类：
@@ -24,25 +15,71 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 4.工具类：钥匙串存储、加解密工具、常用正则校验、常用日期转化、UUID、设备号、
 5.UI类：弹窗封装、轮播库、K线库
 ```
-## 目录
+## Use
+
+### 1.页面导航
+需解决问题：ViewController UI独立化
+
+- 包括状态条隐藏显示、状态栏高亮显示
+- 导航栏隐藏显示、仅当前页面禁用侧滑返回、ScrollView与侧滑冲突
+- 在导航控制器下首个ScrollView的自动偏移问题，ios11.0之后与之前不一样。
+
+```
+//1.
+//LBBaseNavigationController
+#状态条隐藏显示、状态栏高亮显示
+- (BOOL)prefersStatusBarHidden{
+    return self.topViewController.prefersStatusBarHidden;
+}
+- (UIStatusBarStyle)preferredStatusBarStyle{
+    return self.topViewController.preferredStatusBarStyle;
+}
+
+//2.
+#仅当前页面禁用侧滑返回
+self.fd_interactivePopDisabled
+#仅当前页面导航栏隐藏显示
+self.fd_prefersNavigationBarHidden
+#侧滑开始边缘距离
+self.fd_interactivePopMaxAllowedInitialDistanceToLeftEdge
+
+//3.
+UIViewController (Extension) 中已设置
+	self.extendedLayoutIncludesOpaqueBars = YES;
+    if (@available(iOS 11.0, *)) {
+    }else {
+        self.automaticallyAdjustsScrollViewInsets = NO;
+    }
+UITableView (Extension) 中使用便利构建已设置
+	if (@available(iOS 11.0, *)) {
+        tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+    }
 ```
 
+### 2.主题配置
+需解决的问题: 灵活配置。有DefaultTheme，也可配置Theme。
 
-```
+- 包括主题色、背景色
+- 多等级字体色
+- 多等级字体大小
 
-## Installation
+### 3.国际化
+需解决的问题：文言支持灵活扩展，可自动化
 
-LBBaseComponent is available through [CocoaPods](https://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+- 使用默认NSLocalizedString(<#key#>, <#comment#>)创建
+- 由主项目动态扩展语言支持
+- 支持自动化脚本
 
-```ruby
-pod 'LBBaseComponent'
-```
+### 4.便利构建器
+需解决的问题：常使用类和初始化属性，创建便利构建器。
 
-## Author
+- 首个tableView在导航下自动偏移问题
+- 常用UILabel获取label宽度或高度。
 
-iCoobin, shoubin.cheng@5th.work
+### 5.使用约束来写高度可变Cell
 
-## License
+### 6.常量使用
 
-LBBaseComponent is available under the MIT license. See the LICENSE file for more info.
+### BaseView子View代码书写示例
+
+### BaseCell子Cell代码书写示例

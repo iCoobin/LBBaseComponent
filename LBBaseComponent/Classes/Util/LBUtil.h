@@ -10,6 +10,5 @@
 
 #import "LBKeyChainUtil.h"
 #import "LBVerificationUtil.h"
-#import "UUIDUtil.h"
 
 #endif /* LBUtil_h */

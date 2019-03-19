@@ -7,7 +7,7 @@ target 'LBBaseComponent_Example' do
 
     #pod 'LBBaseComponent', :git => 'git@github.com:iCoobin/LBBaseComponent.git', :tag => '0.1.1'
     pod 'Number'
-    pod 'FDFullscreenPopGesture'
+    #pod 'FDFullscreenPopGesture'
     
   target 'LBBaseComponent_Tests' do
     inherit! :search_paths
